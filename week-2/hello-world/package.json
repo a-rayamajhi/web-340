@@ -1,0 +1,13 @@
+{
+  "name": "rayamajhi-exercise-2.2",
+  "description": "Exercise 2.2 - Hello World with Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-2.2.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
