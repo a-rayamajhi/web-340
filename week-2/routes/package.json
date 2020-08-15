@@ -1,0 +1,13 @@
+{
+  "name": "rayamajhi-exercise-2.3",
+  "description": "Exercise 2.3 - Demonstrates Express route behaviors",
+  "main": "rayamajhi-exercise-2.3.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-2.3.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
