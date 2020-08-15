@@ -1,11 +1,9 @@
 /*
 ============================================
 ; Title:  Exercise 2.2 - Hello World with Express
-; Author: Professor Massoud
+; Author: Anil Rayamajhi
 ; Date:   14 Aug 2020
-; Modified By: Anil Rayamajhi
-; Description: Creates a new server and  listens
-;              on port 8080.
+; Description: Creates a new server and  listens on port 8080.
 ;===========================================
 */
 

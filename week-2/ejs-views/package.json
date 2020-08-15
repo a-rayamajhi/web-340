@@ -1,0 +1,13 @@
+{
+  "name": "ejs-views",
+  "description": "Creates a Node.js server and returns the index.ejs page",
+  "main": "rayamajhi-assignment-2.4.js",
+  "scripts": {
+    "start": "node rayamajhi-assignment-2.4.js"
+  },
+  "author": "Anil Rayamajhi",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
