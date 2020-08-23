@@ -74,6 +74,7 @@ app.get("/products", function (request, response) {
   });
 });
 
+// Start Server listening at port 8080
 http.createServer(app).listen(PORT, function () {
   console.log(`Application started on port ${PORT}`);
 });
