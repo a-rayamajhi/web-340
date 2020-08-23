@@ -1,0 +1,16 @@
+{
+  "name": "advanced-routing",
+  "description": "Demonstrates advanced routing",
+  "main": "rayamajhi-exercise-3.3.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-3.3.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}

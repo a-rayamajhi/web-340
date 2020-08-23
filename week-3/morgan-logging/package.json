@@ -1,0 +1,12 @@
+{
+  "name": "morgan-logging",
+  "description": "Demonstrates how to configure the Morgan logger",
+  "main": "rayamajhi-exercise-3.2.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-3.2.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {}
+}

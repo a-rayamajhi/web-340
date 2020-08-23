@@ -1,0 +1,17 @@
+{
+  "name": "putting-it-all-together",
+  "description": "Base server configurations for a fully working Express application.",
+  "main": "rayamajhi-assignment-3.4.js",
+  "scripts": {
+    "start": "node rayamajhi-assignment-3.4.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
