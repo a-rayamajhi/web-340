@@ -1,0 +1,15 @@
+{
+  "name": "json-api",
+  "description": "Demonstrates how to return JSON from a Node.js server",
+  "main": "rayamajhi-exercise-4.2.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-4.2.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}

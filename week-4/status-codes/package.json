@@ -1,0 +1,15 @@
+{
+  "name": "status-codes",
+  "description": "Demonstrates how to programmatically set Node.js status codes.",
+  "main": "rayamajhi-exercise-4.3.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-4.3.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
