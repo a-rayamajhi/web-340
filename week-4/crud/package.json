@@ -1,0 +1,15 @@
+{
+  "name": "crud",
+  "description": "Demonstrates CRUD operations in a Node.js API.",
+  "main": "rayamajhi-assignment-4.4.js",
+  "scripts": {
+    "start": "node rayamajhi-assignment-4.4.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
