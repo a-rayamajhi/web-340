@@ -1,0 +1,16 @@
+{
+  "name": "pug-template",
+  "description": "Demonstrates the Pug view engine.",
+  "main": "rayamajhi-exercise-5.3.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-5.3.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.0"
+  }
+}

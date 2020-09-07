@@ -1,0 +1,16 @@
+{
+  "name": "if-else-render",
+  "description": "Demonstrates EJS 'if-else-render' operations.",
+  "main": "rayamajhi-exercise-5.2.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-5.2.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  }
+}
