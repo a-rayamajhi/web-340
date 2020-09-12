@@ -1,7 +1,7 @@
 ## Employee Management System
 
 <br /><br />
-Start Application with node
+Spin Server with Node
 
 ```
 npm start
