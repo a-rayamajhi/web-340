@@ -1,0 +1,17 @@
+{
+  "name": "mongoose-connection",
+  "description": "Demonstrates how to setup a MongoDB Connection.",
+  "main": "rayamajhi-exercise-6.3.js",
+  "scripts": {
+    "start": "node rayamajhi-exercise-6.3.js"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.5",
+    "morgan": "^1.10.0"
+  }
+}
