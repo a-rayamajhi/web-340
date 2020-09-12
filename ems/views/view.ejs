@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+<body>
+  <%- include('navbar'); -%>
+
+  <main style="height: 70rem">
+    <div class="container">
+      <br /><br /><br />
+      <div class="display-4"><%= title %></div>
+      <div>IN PROGRESS</div>
+
+      <pre>
+        <%= JSON.stringify(employee, null, ' ') %>
+      </pre>
+    </div>
+  </main>
+
+  <%- include('footer'); -%>
+</body>

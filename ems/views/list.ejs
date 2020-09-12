@@ -1,0 +1,38 @@
+<table class="table table-hover table-borderless">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Position</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% for(var i=0; i < employees.length; i++) { %>
+      <tr>
+        <td><%= employees[i].id %></td>
+        <td><%= employees[i].firstName %></td>
+        <td><%= employees[i].lastName %></td>
+        <td><%= employees[i].position %></td>
+        <td class="td-action">
+          <div>
+           <a href="/show/<%= employees[i].id %>">
+            <button type="button" class="btn btn-light" title="show">
+              <i class="fa fa-eye"></i>
+            </button>
+           </a>
+            <button type="button" class="btn btn-light" title="edit">
+              <i class="fa fa-edit"></i>
+            </button>
+            <button type="button" class="btn btn-light" title="delete">
+              <i class="fa fa-trash"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+   <% } %>
+   </table>
+
+  </tbody>
+</table>
