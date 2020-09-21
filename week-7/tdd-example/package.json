@@ -1,0 +1,18 @@
+{
+  "name": "tdd-example",
+  "description": "Demonstrations how to create a TDD unit test.",
+  "main": "",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Anil Rayamajhi",
+  "private": true,
+  "version": "0.0.1",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

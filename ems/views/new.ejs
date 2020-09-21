@@ -7,7 +7,46 @@
     <div class="container">
       <br /><br /><br />
       <div class="display-4"><%= title %></div>
-      IN PROGRESS
+      <form method="post" action="/process-employee-form" class="col-md-8">
+        <div class="form-group">
+          <label for="firstName">First Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            name="lastName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="position">Position</label>
+          <input
+            type="text"
+            class="form-control"
+            id="position"
+            name="position"
+          />
+        </div>
+        <br /><br />
+
+        <div class="form-group">
+          <!-- CSRF token -->
+
+          <button type="submit" class="btn btn-secondary float-right">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </main>
 
