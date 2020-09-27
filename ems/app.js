@@ -14,7 +14,10 @@ const express = require("express"),
   // initialize the express app
   app = express(),
   mongoose = require("mongoose"),
+  helmet = require("helmet"),
   bodyParser = require("body-parser"),
+  cookieParser = require("cookie-parser"),
+  csrf = require("csurf"),
   // Assign PORT
   PORT = 8080,
   Employee = require("./models/employee"),
@@ -26,14 +29,26 @@ require("dotenv").config();
 console.log(header.display("Anil", "Rayamajhi", "Employee Management System"));
 console.log("---");
 
+// setup csrf protection
+var csrfProtection = csrf({ cookie: true });
 // initialize Morgan
 app.use(logger("tiny"));
+// helmet middleware
+app.use(helmet.xssFilter());
 // Body parser
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
+app.use(cookieParser());
+app.use(csrfProtection);
+app.use(function (request, response, next) {
+  var token = request.csrfToken();
+  response.cookie("XSRF-TOKEN", token);
+  response.locals.csrfToken = token;
+  next();
+});
 
 app.set("views", path.resolve(__dirname, "views"));
 // Import static assets
@@ -91,18 +106,18 @@ app.get("/new", function (request, response) {
   });
 });
 
-app.post("/process-employee-form", function (req, res) {
-  if (!req.body.firstName || !req.body.lastName) {
+app.post("/process-employee-form", function (request, response) {
+  if (!request.body.firstName || !request.body.lastName) {
     res.status(400).send("Entries must have a first and last name");
     return;
   }
 
   // get the request's form data
-  const firstName = req.body.firstName,
-    lastName = req.body.lastName,
-    position = req.body.position;
+  const firstName = request.body.firstName,
+    lastName = request.body.lastName,
+    position = request.body.position;
 
-  // create a fruit model
+  // create a employee model
   let employee = new Employee({
     firstName,
     lastName,
@@ -116,7 +131,7 @@ app.post("/process-employee-form", function (req, res) {
       throw err;
     } else {
       console.log("successfully saved!");
-      res.redirect("/");
+      response.redirect("/");
     }
   });
 });
@@ -142,6 +157,77 @@ app.get("/show/:employeeId", function (request, response) {
       }
     }
   });
+});
+
+/**
+ * @Route Employee Show page
+ * @Method GET
+ */
+app.get("/edit/:employeeId", function (request, response) {
+  const employeeId = request.params["employeeId"];
+  Employee.findOne({ _id: employeeId }, function (err, employee) {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      if (!!employee) {
+        response.render("edit", {
+          title: "EMS | Edit",
+          employee: employee,
+        });
+      } else {
+        response.redirect("/");
+      }
+    }
+  });
+});
+
+/**
+ * @Route Patch
+ * @Method PATCH
+ */
+app.post("/edit-employee-form/:employeeId", function (request, response) {
+  const employeeId = request.params["employeeId"];
+  if (!request.body.firstName || !request.body.lastName) {
+    res.status(400).send("Entries must have a first and last name");
+    return;
+  }
+
+  // update
+  Employee.findOneAndUpdate({ _id: employeeId }, request.body, {}, function (
+    err
+  ) {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      console.log("successfully saved!");
+      response.redirect("/");
+    }
+  });
+});
+
+/**
+ * @Route Employee Delete
+ * @Method DELETE
+ */
+app.get("/delete/:employeeId", function (request, response) {
+  const employeeId = request.params["employeeId"];
+
+  Employee.deleteOne({ _id: employeeId }, function (err) {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      console.log("Successfully Deleted!");
+      response.redirect("/");
+    }
+  });
+});
+
+// Handling 404
+app.use(function (req, res, next) {
+  res.status(404).send("404");
 });
 
 // Spinning Server at port 8080

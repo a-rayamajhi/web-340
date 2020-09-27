@@ -7,7 +7,11 @@
     <div class="container">
       <br /><br /><br />
       <div class="display-4"><%= title %></div>
-      <form method="post" action="/process-employee-form" class="col-md-8">
+      <form
+        method="post"
+        action="/edit-employee-form/<%= employee.id %>"
+        class="col-md-8"
+      >
         <div class="form-group">
           <label for="firstName">First Name*</label>
           <input
@@ -16,6 +20,7 @@
             id="firstName"
             name="firstName"
             required
+            value="<%= employee.firstName %>"
           />
         </div>
         <div class="form-group">
@@ -26,6 +31,7 @@
             id="lastName"
             name="lastName"
             required
+            value="<%= employee.lastName %>"
           />
         </div>
         <div class="form-group">
@@ -35,6 +41,7 @@
             class="form-control"
             id="position"
             name="position"
+            value="<%= employee.position %>"
           />
         </div>
         <br /><br />
@@ -43,7 +50,7 @@
           <!-- CSRF token -->
           <input name="_csrf" value="<%= csrfToken %>" type="hidden" />
           <button type="submit" class="btn btn-secondary float-right">
-            Submit
+            Update
           </button>
         </div>
       </form>
