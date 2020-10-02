@@ -142,7 +142,7 @@ app.post("/process-employee-form", function (request, response) {
  */
 app.get("/show/:employeeId", function (request, response) {
   const employeeId = request.params["employeeId"];
-  Employee.find({ _id: employeeId }, function (err, employee) {
+  Employee.findOne({ _id: employeeId }, function (err, employee) {
     if (err) {
       console.log(err);
       throw err;

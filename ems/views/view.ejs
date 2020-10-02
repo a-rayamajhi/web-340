@@ -5,13 +5,22 @@
 
   <main style="height: 70rem">
     <div class="container">
-      <br /><br /><br />
+      <br /><br />
+      <a class="btn btn-light" href="/">
+        <i class="fa fa-chevron-left fa-xs"></i>&nbsp;&nbsp;&nbsp;&nbsp;Back
+      </a>
+      <br /><br />
       <div class="display-4"><%= title %></div>
-      <div>IN PROGRESS</div>
+      <div class="h4">
+        <strong><%= employee.firstName %> <%= employee.lastName %></strong>
+      </div>
+      <div><%= employee.position %></div>
 
-      <pre>
-        <%= JSON.stringify(employee, null, ' ') %>
-      </pre>
+      <div class="code-view">
+        <pre>
+          <%= employee %>
+        </pre>
+      </div>
     </div>
   </main>
 

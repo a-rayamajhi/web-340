@@ -69,12 +69,11 @@ footer {
 }
 
 footer > .container {
-  height: 40rem;
   padding-top: 2rem;
 }
 
 footer .footer-wrapper {
-  height: 35rem;
+  height: 95%;
 }
 
 footer .footer-grid {
@@ -111,6 +110,12 @@ table tr {
   color: #e2e2e2;
 }
 
+.secondary-text.caption {
+  margin-top: 7rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
 .section > .secondary-text {
   margin: 1rem auto 1.2rem;
 }
@@ -132,8 +137,21 @@ table tr {
   .td-action .btn {
     padding: 0.175rem 0.55rem;
   }
+  .td-id {
+    display: none;
+  }
 }
 
 .btn {
   padding: 0.395rem 0.75rem 0.31rem;
+}
+
+.code-view {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  border: 2px solid #161616;
+  border-radius: 5px;
 }
