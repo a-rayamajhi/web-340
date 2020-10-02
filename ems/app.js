@@ -18,8 +18,6 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   cookieParser = require("cookie-parser"),
   csrf = require("csurf"),
-  // Assign PORT
-  PORT = 8080,
   Employee = require("./models/employee"),
   header = require("../header.js");
 
@@ -28,6 +26,9 @@ require("dotenv").config();
 
 console.log(header.display("Anil", "Rayamajhi", "Employee Management System"));
 console.log("---");
+
+// Assign PORT
+app.set("port", process.env.PORT || 8080);
 
 // setup csrf protection
 var csrfProtection = csrf({ cookie: true });
@@ -231,6 +232,6 @@ app.use(function (req, res, next) {
 });
 
 // Spinning Server at port 8080
-http.createServer(app).listen(PORT, function () {
-  console.log(`Application started on port ${PORT}!`);
+http.createServer(app).listen(app.get("port"), function () {
+  console.log(`Application started on port ${app.get("port")}!`);
 });
